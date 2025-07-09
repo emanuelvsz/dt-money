@@ -1,16 +1,16 @@
-import { Card } from "../Card";
-import { Finance } from "../Table";
+import { ITransaction } from "@/types/transaction";
+import { Card } from "../card";
 
 interface CardContainerProps {
-  finances: Finance[];
+  transaction: ITransaction[];
 }
 
-export function CardContainer({ finances }: CardContainerProps) {
-  const income = finances
+export function CardContainer({ transaction }: CardContainerProps) {
+  const income = transaction
     .filter((f) => f.price > 0)
     .reduce((sum, f) => sum + f.price, 0);
 
-  const outcome = finances
+  const outcome = transaction
     .filter((f) => f.price < 0)
     .reduce((sum, f) => sum + f.price, 0);
 
