@@ -58,13 +58,11 @@ export function Header({ open, onOpenChange, onAddTransaction }: HeaderProps) {
               Nova transação
             </Button>
           </DialogTrigger>
-
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Nova transação</DialogTitle>
               <DialogDescription>Adicione uma nova transação financeira</DialogDescription>
             </DialogHeader>
-
             <div className="grid gap-4 py-4">
               <div className="grid grid-cols-4 items-center gap-4">
                 <Label htmlFor="title" className="text-right">
@@ -77,7 +75,6 @@ export function Header({ open, onOpenChange, onAddTransaction }: HeaderProps) {
                   className="col-span-3"
                 />
               </div>
-
               <div className="grid grid-cols-4 items-center gap-4">
                 <Label htmlFor="price" className="text-right">
                   Preço
@@ -90,7 +87,6 @@ export function Header({ open, onOpenChange, onAddTransaction }: HeaderProps) {
                   className="col-span-3"
                 />
               </div>
-
               <div className="grid grid-cols-4 items-center gap-4">
                 <Label htmlFor="category" className="text-right">
                   Categoria
@@ -102,8 +98,6 @@ export function Header({ open, onOpenChange, onAddTransaction }: HeaderProps) {
                   className="col-span-3"
                 />
               </div>
-
-              {/* Novo campo para selecionar tipo */}
               <div className="grid grid-cols-4 items-center gap-4">
                 <Label htmlFor="type" className="text-right">
                   Tipo
@@ -119,7 +113,6 @@ export function Header({ open, onOpenChange, onAddTransaction }: HeaderProps) {
                 </select>
               </div>
             </div>
-
             <DialogFooter>
               <Button onClick={handleSave}>Salvar</Button>
             </DialogFooter>
